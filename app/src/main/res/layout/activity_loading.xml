@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_start"
+        tools:context=".MainActivity"
+        android:animateLayoutChanges="true">
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/arno_pro"
+            android:text="ВАС"
+            android:textColor="#B22B2B"
+            android:textSize="90sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.33"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.37" />
+
+        <TextView
+            android:id="@+id/tv_tochka"
+            android:layout_width="236.31dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:fontFamily="@font/arno_pro"
+            android:gravity="start"
+            android:shadowColor="#94000000"
+            android:shadowDy="2"
+            android:shadowRadius="4"
+            android:text="ТОЧКА"
+            android:textColor="#B22B2B"
+            android:textSize="70sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.22"
+            app:layout_constraintStart_toEndOf="@+id/iv_logo_gif"
+            app:layout_constraintTop_toBottomOf="@+id/tv_hello"
+            app:layout_constraintVertical_bias="0.032" />
+
+        <TextView
+            android:id="@+id/tv_hello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/arno_pro"
+            android:shadowColor="#94000000"
+            android:shadowDy="2"
+            android:shadowRadius="4"
+            android:text="приветствует"
+            android:textColor="#B22B2B"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/iv_logo_gif"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginStart="36dp"
+            android:alpha="0.7"
+            android:src="@drawable/gif_logo_pulse"
+            android:transitionName="imageStatus"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_hello"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    app:cardUseCompatPadding="true"
+
+    app:cardCornerRadius="15dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/arno_pro"
+                android:text="Страна"
+                android:textColor="#481616"
+                android:textSize="8sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.007"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toBottomOf="@+id/tv_type" />
+
+            <TextView
+                android:id="@+id/tv_country1"
+                style="@style/TextViewPrimaryItalic"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Россия"
+                android:textColor="#481616"
+                android:textSize="10sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toBottomOf="@+id/textView8"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/TextViewPrimaryItalic"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:text="Каберне Совиньон"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="75dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_type"
+                style="@style/TextViewPrimaryItalic"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/arno_pro"
+                android:text="Вино сухое красное"
+                android:textColor="#481616"
+                android:textSize="10sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <com.bjornfree.tochka.loyalty.utils.StrikeTextView
+                android:id="@+id/tv_old_price"
+                style="@style/TextViewPrimaryItalic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="1dp"
+                android:textColor="#A9A4A4"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/tv_price"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.88"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toBottomOf="@+id/tv_country1"
+                app:layout_constraintVertical_bias="0.47000003" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                style="@style/TextViewPrimaryItalic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:text="400"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tv_cent" />
+
+            <TextView
+                android:id="@+id/tv_cent"
+                style="@style/TextViewPrimaryItalic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="16dp"
+                android:text=".00"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tv_price"
+                app:layout_constraintHorizontal_bias="0.03"
+                app:layout_constraintStart_toEndOf="@+id/imageView3">
+
+                <ImageView
+                    android:id="@+id/iv_star1"
+                    android:layout_width="10dp"
+                    android:layout_height="15dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_empty" />
+
+                <ImageView
+                    android:id="@+id/iv_star2"
+                    android:layout_width="10dp"
+                    android:layout_height="15dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_empty" />
+
+                <ImageView
+                    android:id="@+id/iv_star3"
+                    android:layout_width="10dp"
+                    android:layout_height="15dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_empty" />
+
+                <ImageView
+                    android:id="@+id/iv_star4"
+                    android:layout_width="10dp"
+                    android:layout_height="15dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_empty" />
+
+                <ImageView
+                    android:id="@+id/iv_star5"
+                    android:layout_width="10dp"
+                    android:layout_height="15dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_empty" />
+
+                <TextView
+                    android:id="@+id/tv_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="  (5)"
+                    android:textSize="7sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/arno_pro"
+                android:text="Тип"
+                android:textColor="#481616"
+                android:textSize="8sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.007"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="-5dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/ic_bookmark_24dp" />
+
+
+
+    </FrameLayout>
+</androidx.cardview.widget.CardView>

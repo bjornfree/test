@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_main">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.youth.banner.Banner
+                android:id="@+id/banner_ivents"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_news"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/banner_ivents">
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="436dp"
+                    android:layout_height="157dp"
+                    android:cropToPadding="true"
+                    android:scaleType="fitStart"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/discount_background" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_news"
+                    android:layout_width="0dp"
+                    android:layout_height="220dp"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:overScrollMode="never"
+                    android:scrollbars="none"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:listitem="@layout/product_item" />
+
+                <TextView
+                    android:id="@+id/tv_news"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/arno_pro"
+                    android:text="Наши новинки"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="italic"
+                    app:layout_constraintEnd_toEndOf="@+id/iv_back"
+                    app:layout_constraintHorizontal_bias="0.495"
+                    app:layout_constraintStart_toStartOf="@+id/iv_back"
+                    app:layout_constraintTop_toTopOf="@+id/iv_back" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_exclusive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_news">
+
+                <ImageView
+                    android:id="@+id/iv_back2"
+                    android:layout_width="436dp"
+                    android:layout_height="157dp"
+                    android:cropToPadding="true"
+                    android:scaleType="fitStart"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/discount_background" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_exclusive"
+                    android:layout_width="0dp"
+                    android:layout_height="220dp"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:overScrollMode="never"
+                    android:scrollbars="none"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/iv_back2"
+                    tools:listitem="@layout/product_item" />
+
+                <TextView
+                    android:id="@+id/tv_exclusive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/arno_pro"
+                    android:text="Эксклюзивно в ТОЧКЕ"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="italic"
+                    app:layout_constraintEnd_toEndOf="@+id/iv_back2"
+                    app:layout_constraintHorizontal_bias="0.495"
+                    app:layout_constraintStart_toStartOf="@+id/iv_back2"
+                    app:layout_constraintTop_toTopOf="@+id/iv_back2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</FrameLayout>

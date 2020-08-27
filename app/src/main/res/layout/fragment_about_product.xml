@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/about_product_fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_start">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+
+            <TextView
+                android:id="@+id/tv_country"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/arno_pro"
+                android:includeFontPadding="false"
+                android:text="Россия"
+                android:textColor="#481616"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/img_bottle"
+                app:layout_constraintTop_toBottomOf="@+id/tv_type" />
+
+            <ImageView
+                android:id="@+id/img_bottle"
+                android:layout_width="135dp"
+                android:layout_height="356dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/arno_pro"
+                android:text="Brut Rose"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/img_bottle"
+                app:layout_constraintTop_toBottomOf="@+id/iv_mark" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/img_bottle"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name">
+
+                <ImageView
+                    android:id="@+id/iv_star1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_empty" />
+
+                <ImageView
+                    android:id="@+id/iv_star2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_empty" />
+
+                <ImageView
+                    android:id="@+id/iv_star3"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_empty" />
+
+                <ImageView
+                    android:id="@+id/iv_star4"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_empty" />
+
+                <ImageView
+                    android:id="@+id/iv_star5"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_empty" />
+
+                <TextView
+                    android:id="@+id/tv_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="  (5)" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_mark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_bookmark_24dp" />
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/arno_pro"
+                android:includeFontPadding="false"
+                android:text="Игристое розовое"
+                android:textColor="#481616"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/img_bottle"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arno_pro"
+                android:gravity="end"
+                android:text="400"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintEnd_toStartOf="@+id/tv_cent"
+                app:layout_constraintStart_toEndOf="@+id/img_bottle"
+                app:layout_constraintTop_toBottomOf="@+id/tv_old_price" />
+
+            <TextView
+                android:id="@+id/tv_cent"
+                style="@style/TextViewPrimaryItalic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:text=".00"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_old_price" />
+
+            <com.bjornfree.tochka.loyalty.utils.StrikeTextView
+                android:id="@+id/tv_old_price"
+                style="@style/TextViewPrimaryItalic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textColor="#A9A4A4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.89"
+                app:layout_constraintStart_toEndOf="@+id/img_bottle"
+                app:layout_constraintTop_toBottomOf="@+id/tv_country">
+
+            </com.bjornfree.tochka.loyalty.utils.StrikeTextView>
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/arno_pro"
+                android:text="Вино розового цвета с оттенками меди. В аромате тона красной смородины, земляники и других красных ягод. Во вкусе тонкое и деликатное. Открывается нюансами клубники, вишни и цедры красного грейпфрута. Вино с высокой минеральностью и продолжительным послевкусием."
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_bottle" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="#1AC4C4C4"
+                android:fontFamily="@font/arno_pro"
+                android:gravity="center"
+                android:text="Попробуйте также"
+                android:textColor="#B2412E2E"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_description" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_recomended"
+                android:layout_width="0dp"
+                android:layout_height="220dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp"
+                android:orientation="horizontal"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9"
+                tools:listitem="@layout/product_item" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</FrameLayout>

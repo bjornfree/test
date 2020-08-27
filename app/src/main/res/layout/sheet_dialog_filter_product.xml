@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ListView
+        android:id="@+id/lv_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:divider="#E4DBDB"
+        android:dividerHeight="1dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/support_simple_spinner_dropdown_item" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_weight="0.5"
+        android:background="@color/darkred"
+        app:cardBackgroundColor="@color/darkred"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp">
+
+        <Button
+            android:id="@+id/btn_apply"
+            style="@style/TextViewPrimaryNormal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="Применить"
+            android:textColor="@color/white"
+            android:textStyle="normal" />
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

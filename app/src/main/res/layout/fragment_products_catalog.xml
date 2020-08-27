@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/products_catalog_fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_main">
+
+
+        <com.innovattic.rangeseekbar.RangeSeekBar
+            android:id="@+id/rangeSeekBar"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_end_value"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/tv_start_value"
+            app:layout_constraintTop_toBottomOf="@+id/img_header"
+            app:rsb_maxThumbDrawable="@drawable/ic_seek_dot2"
+            app:rsb_minThumbDrawable="@drawable/ic_seek_dot2"
+            app:rsb_trackColor="@color/gray"
+            app:rsb_sidePadding="0dp"
+            app:rsb_touchRadius="30dp"
+            app:rsb_trackRoundedCaps="true"
+            app:rsb_maxThumbOffsetHorizontal="1dp"
+            app:rsb_minThumbOffsetHorizontal="1dp"
+            app:rsb_trackSelectedColor="@color/darkred"
+            app:rsb_trackSelectedRoundedCaps="true"
+            app:rsb_trackSelectedThickness="2dp"
+            app:rsb_trackThickness="1dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_products_catalog"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="7dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_filters"
+            tools:listitem="@layout/row_catalog_product_item" />
+
+        <ImageView
+            android:id="@+id/img_header"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/catalog_banner"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tv_start_value"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:text="1"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_header" />
+
+        <TextView
+            android:id="@+id/tv_end_value"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:text="999999"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_header" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_filters"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rangeSeekBar">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
+

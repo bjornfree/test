@@ -1,0 +1,58 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="loadingActivity">
+        <item name="android:textSize">62.97sp</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:textColor">#B32B2B</item>
+        <item name="android:shadowColor">#33000000</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">44.45</item>
+    </style>
+
+    <style name="TextViewPrimaryNormal">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/arno_pro</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="fontStyle">normal</item>
+    </style>
+
+    <style name="TextViewPrimaryItalic" parent="TextViewPrimaryNormal">
+       <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="TextViewHeading" parent="TextViewPrimaryNormal">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="BottomNavigationView" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="BottomNavigationView.Active" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rounded_dialog</item>
+    </style>
+    
+
+</resources>
